@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float a,b,c,d,e,f,g,h,i;
+    cout<<"ingresar la nota del primer examen"<<endl;
+    cin>>a;
+    cout<<"ingresar la nota del segundo examen"<<endl;
+    cin>>b;
+    cout<<"ingresar la nota del tercer examen"<<endl;
+    cin>>c;
+    cout<<"ingresar la nota del examen final"<<endl;
+    cin>>d;
+     cout<<"ingresar la nota del proyecto final"<<endl;
+    cin>>e;
+    f=((a+b+c)/3)*0.40;
+    g=d*0.40;
+    h=e*0.20;
+    i=f+g+h;
+     cout<<"La nota final es "<<i;
+   
+    
+    return 0;
+}
