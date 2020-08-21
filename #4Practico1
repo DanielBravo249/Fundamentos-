@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+     float horas,precio,salario,sueldo;
+     string nombre;
+    cout<<"ingresar su nombre "<<endl;
+    cin>>nombre;
+    cout<<"ingresar las horas que trabajo"<<endl;
+    cin>>horas;
+   cout<<"ingresar el precio por hora"<<endl;
+    cin>>precio;
+    salario=horas*precio;
+    if(salario>8272){
+        sueldo=salario*0.87;
+       cout<<nombre<<"su sueldo es de "<<sueldo;
+    }
+     else{
+        sueldo=salario;
+       cout<<nombre<<" su sueldo es de "<<sueldo;
+    }
+    return 0;
+}
