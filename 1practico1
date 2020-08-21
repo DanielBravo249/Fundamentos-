@@ -1,0 +1,19 @@
+#include <iostream>
+#include <math.h>
+
+
+using namespace std;
+
+int main()
+{
+    float d,p,v,a,pi=3.14;
+    cout<<"Ingresar el valor del diametro de la circuferencia"<<endl;
+    cin>>d;
+    p=pi*d;
+    v=(1.33*pi)*pow((d/2),3);
+    a=pi*(d/2)*(d/2);
+    cout<<"El Área es  "<<a<<endl;
+    cout<<"El Volumen es  "<<v<<endl;
+    cout<<"El Diametro es  "<<p<<endl;
+    return 0;
+}
