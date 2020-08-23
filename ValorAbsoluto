@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float a;
+    cout<<"Ingresar un numero "<<endl;
+    cin>>a;
+    if(a>=0){
+    cout<<"el valor absoluto del numero es: "<<a;
+    }
+     else {
+    cout<<"el valor absoluto del numero es: "<<-a;
+    }
+  
+    
+    return 0;
+}
