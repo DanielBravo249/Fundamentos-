@@ -1,0 +1,18 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float c,p,t,i;
+    cout<<"ingresar la acantidad del capital"<<endl;
+    cin>>c;
+    cout<<"ingresar el perido de años"<<endl;
+    cin>>p;
+    cout<<"ingresar la tasa de interes "<<endl;
+    cin>>t;
+  i=c*p*t;
+  cout<<"El interes simple es :"<<i;
+    return 0;
+}
