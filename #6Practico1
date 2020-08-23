@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+intmain ()
+{
+  int a,b,c,d;
+  cout << "ingresar la hora" << endl;
+  cin >> a;
+  cout << "ingresar los minutos" << endl;
+  cin>>b;
+  cout << "ingresar los segundos" << endl;
+  cin>>c;
+  if(a>12){
+      d=a-12;
+      cout << "Son las : " <<d<<":"<<b<<":"<<c<<" PM";
+  }
+  else {
+      
+      cout << "Son las : " <<a<<":"<<b<<":"<<c<<" AM";
+  }
+  return 0;
+}
