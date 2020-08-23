@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float a,b,c,d,e,f,x,y;
+    cout<<"Ax + By = C "<<endl;
+    cout<<"Dx + Ey = F"<<endl;
+    cout<<"ingresar valor para A"<<endl;
+    cin>>a;
+    cout<<"ingresar valor para B"<<endl;
+    cin>>b;
+    cout<<"ingresar valor para C"<<endl;
+    cin>>c;
+    cout<<"ingresar valor para D"<<endl;
+    cin>>d;
+    cout<<"ingresar valor para E"<<endl;
+    cin>>e;
+    cout<<"ingresar valor para F"<<endl;
+    cin>>f;
+    
+  y=((f*a)-(d*c))/((-d*b)+(a*e));
+  x= (f-(e*y))/d;
+     cout<<"el valor de x:"<<x<<endl;
+    cout<<"el valor de y:"<<y<<endl;
+   
+    
+    return 0;
+}
