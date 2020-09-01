@@ -1,0 +1,43 @@
+#include "stdafx.h" 
+#include <iostream> 
+#include "conio.h"   
+
+using namespace std;
+
+void main()
+{
+    int opcion,h,hq,p,s;
+	float pedido;
+cout<<".................MENU.................."<<endl;
+cout<<"1) Hamburguesas.....................3Bs"<<endl;
+cout<<"2) Hamburguesas con queso...........5Bs"<<endl;
+cout<<"3) Papas fitas......................2Bs"<<endl;
+cout<<"4) Soda.............................2.5Bs"<<endl;
+cout<<"Ingrese la opcion"<<endl;
+cin>>opcion;
+switch(opcion){
+
+        case 1: cout<<"Ingrese cuantas hamburguesas quiere"<<endl;
+	    cin>>h;
+		pedido=h*3;
+		cout<<"Total de pedido es: "<<pedido<<"Bs"<<endl;
+		break;
+		case 2: cout<<"Ingrese cuantas hamburguesas con queso quiere"<<endl;
+	    cin>>hq;
+		pedido=hq*5;
+		cout<<"Total de pedido es: "<<pedido<<"Bs"<<endl;
+		break;
+		case 3: cout<<"Ingrese cuantas papas fritas quiere"<<endl;
+	    cin>>p;
+		pedido=p*2;
+		cout<<"Total de pedido es: "<<pedido<<"Bs"<<endl;
+		break;
+		case 4: cout<<"Ingrese cuantas sodas quiere"<<endl;
+	    cin>>s;
+		pedido=s*2.5;
+		cout<<"Total de pedido es: "<<pedido<<"Bs"<<endl;
+		break;
+		default: cout<<"Error";
+}
+	getch();
+}
