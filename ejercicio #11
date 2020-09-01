@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int p;
+    cout<<"Ingrese el peso en gramos de la carta"<<endl;
+    cin>>p;
+    if((p>0)&&(p<=50)){
+        cout<<"El costo es de 1.50 BS";
+    }
+    else if ((p>50)&&(p<=100)){
+        cout<<"El costo es de 4.00 BS";
+    }
+     else if ((p>100)&&(p<=200)){
+        cout<<"El costo es de 6.00 BS";
+    }
+     else if((p>200)&&(p<=350)){
+        cout<<"El costo es de 10.50 BS";
+    }
+     else if((p>350)&&(p<=500)){
+        cout<<"El costo es de 15.00 BS";
+    }
+     else if (p>500){
+        cout<<"No puede enviar como carta";
+     }
+
+    return 0;
+}
