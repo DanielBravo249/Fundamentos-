@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+ int cargar(int valores[],int n);
+ int mostrarvalores(int valores[],int n);
+int main()
+
+{
+    int n;
+    int vec[n];
+    cout<<"Ingresar el tamano del vector"<<endl;
+    cin>>n;
+    cout<<"Ingresar los " <<n<<" valores del vector"<<endl;
+    cargar(vec,n);
+   
+    mostrarvalores(vec,n);
+    
+    return 0;
+}
+ int cargar(int valores[],int n){
+     for(int i=0;i<=n;i++){
+         cout<<"Ingresar el valor del vector "<<i<<endl;
+         cin>>valores[i];
+     }
+ }
+
+int mostrarvalores(int valores[],int n){
+    for(int i=0;i<=n;i++){
+       
+       cout<<"vector["<<i<<"] : "<<valores[i]<<", ";
+     }
+}
