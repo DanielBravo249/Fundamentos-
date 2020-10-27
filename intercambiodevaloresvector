@@ -1,0 +1,40 @@
+#include <iostream>
+
+using namespace std;
+ int cargar(int valores[],int n);
+  int intercambiar(int valores[],int valoresintercambio[], int n);
+  int mostrarvalores(int valores[],int n);
+int main()
+
+{
+    int n;
+    int vo[n],vf[n];
+    cout<<"Ingresar el tamano del vector"<<endl;
+    cin>>n;
+    cout<<"Ingresar los " <<n<<" valores del vector"<<endl;
+    cargar(vo,n);
+    intercambiar(vo,vf,n);
+    cout<<"Vo=";
+    mostrarvalores(vo,n);
+     cout<<"  Vf=";
+    mostrarvalores(vf,n);
+    return 0;
+}
+ int cargar(int valores[],int n){
+     for(int i=0;i<n;i++){
+         cout<<"Ingresar un valor"<<endl;
+         cin>>valores[i];
+     }
+ }
+int intercambiar(int valores[],int valoresintercambio[], int n){
+     for(int i=0;i<n;i++){
+       
+       valoresintercambio[i]=valores[n-1-i];
+     }
+ }
+int mostrarvalores(int valores[],int n){
+    for(int i=0;i<n;i++){
+       
+       cout<<valores[i]<<",";
+     }
+}
