@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    int longitud,espacio;
+    
+    string nombre,apellido;
+    cout<<"ingrese el nombre"<<endl;
+    getline(cin,nombre);
+    espacio=nombre.find(' ');
+    longitud=nombre.length();
+    cout<<nombre.substr(espacio,longitud);
+    apellido=nombre.substr(0,espacio);
+    cout<<apellido;
+ 
+    return 0;
+}
+
