@@ -1,0 +1,73 @@
+#include <iostream>
+
+using namespace std;
+ int cargar(int valores[],int n);
+  int mostrarvalores(int valores[],int n);
+  int may(int numeros[],int n,int mayor);
+  int men(int numeros[],int n,int menor);
+  float divi(int menor,int mayor);
+int main()
+
+{
+    int n;
+    float mayor=0;
+    
+    int vo[n];
+    cout<<"Ingresar el tamano del vector"<<endl;
+    cin>>n;
+    cout<<"Ingresar los " <<n<<" valores del vector"<<endl;
+    cargar(vo,n);
+    cout<<"Vo=";
+    mostrarvalores(vo,n);
+     cout<<endl<<"  mayor ";
+     may(vo,n,mayor);
+     cout<<endl<<"  menor ";
+     int menor=mayor;
+     men(vo,n,menor);
+     divi( menor, mayor);
+    return 0;
+}
+ int cargar(int valores[],int n){
+     for(int i=0;i<=n;i++){
+         cout<<"Ingresar un valor"<<endl;
+         cin>>valores[i];
+     }
+ }
+
+int mostrarvalores(int valores[],int n){
+    for(int i=0;i<=n;i++){
+       
+       cout<<valores[i]<<",";
+     }
+}
+int may (int numeros[],int n,int mayor){
+    
+    for(int i=0;i<=n;i++){
+       if(numeros[i]>mayor){
+           mayor=numeros[i];
+       }
+   }
+   cout<<mayor;
+   return mayor;
+    
+}
+int men (int numeros[],int n,int menor){
+    
+    for(int i=0;i<=n;i++){
+       if(numeros[i]<menor){
+           menor=numeros[i];
+       }
+   }
+   cout<<menor;
+   return menor;
+    
+}
+ float divi(int menor,int mayor){
+     if (mayor%menor==0){
+         cout<<menor<<" es divisor de "<<mayor;
+     }
+     else{
+        cout<<menor<<" no es divisor de "<<mayor; 
+     }
+    
+ }
