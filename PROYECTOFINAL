@@ -1,0 +1,173 @@
+#include <iostream>
+#include <string>
+#include<stdlib.h>
+#include<fstream>
+using namespace std;
+int cargar(int a[],int n);
+int atras();
+void escribirFrases();
+int main() {
+	  system("COLOR 1f");
+	int li,a;
+	cout<<"--------EASY MICRO--------"<<endl;
+	
+    int linea[]={18,29,72,73,77,79,101,0};
+    cargar(linea,7);
+    cout<<"| "<<linea[7]<<")  Quejas  --> "<<"      |"<<endl;
+    cout<<"| "<<1<<")  Salir   --> "<<"      |"<<endl;
+    cout<<"ESCOJA UNA OPCION :";
+    cin>>li;
+     system("cls");
+    switch(li){
+    	case 18:
+    		cout<<"LINEA 18"<<endl;
+cout<<"Opera desde las 5:00 hasta las 23:00"<<endl;
+    		cout<<"----------PARADAS---------- "<<endl;
+    			cout<<"Av Viedma"<<endl;
+    			cout<<"Av Beni "<<endl;
+cout<<"Av Cañoto"<<endl;
+cout<<"Av Irala y Viedma"<<endl;
+    			    			    			
+    		atras();
+    		
+    		break;
+    	case 29:
+    		cout<<"LINEA 29"<<endl;
+		cout<<"Opera desde las 5:00 hasta las 23:00"<<endl;
+cout<<"----------PARADAS---------- "<<endl;
+cout<<"Av Roca y Coronado"<<endl;
+cout<<"Av Alemana y Junin"<<endl;
+cout<<"Av Seoane Sara y Espana"<<endl;
+cout<<"Av Suarez Arana"<<endl;
+cout<<"Av Paragua"<<endl;
+cout<<"Av Virgen de Lujan"<<endl;
+
+    		atras();
+    		break;
+    	case 72:
+    		cout<<"LINEA 72"<<endl;
+cout<<"Opera desde las 5:00 hasta las 23:00" <<endl;
+cout<<"----------PARADAS---------- "<<endl;
+cout<<" Av. Santa Cruz y 2do Anillo "<<endl;
+cout<<" Av. Cristobal de Mendoza "<<endl;
+cout<<" Av. 26 de Febrero"<<endl;
+cout<<" Av. El Trompillo "<<endl;
+
+
+    		atras();
+    		break;
+    	case 73:
+    		cout<<"LINEA 73"<<endl;
+cout<<"Opera desde las 5:00 hasta las 23:00"<<endl;
+cout<<" ----------PARADAS----------"<<endl;
+cout<<" Av. El trompillo  "<<endl;
+cout<<"Av. San aurelio  "<<endl;
+cout<<" Av. 26 de Febrero y Av Centenario "<<endl;
+cout<<" Av. Cristobal de mendoza y Sosa "<<endl;
+cout<<" Av. Santa Cruz 1233"<<endl;
+
+    		atras();
+    		break;
+    	case 77:
+    		cout<<"LINEA 77"<<endl;
+cout<<"Opera desde las 5:00 hasta las 23:00"<<endl;
+		cout<<"----------PARADAS---------- "<<endl;
+		cout<<"Av. Banzer del 6to. al 2do. anillo"<<endl; 
+cout<<"Av. Cañoto y 1er. anillo "<<endl;
+cout<<"Av. Omar Chavez y 2do. anillo"<<endl;
+cout<<"Av. Santos Dumont del 2do al 5to anillo"<<endl;
+cout <<"Av. San Pablo y 6to anillo"<<endl;
+    		atras();
+    		break;
+    	case 79:
+    		cout<<"LINEA 79"<<endl;
+cout<<"Opera desde las 5:00 hasta las 23:00"<<endl;
+cout<<"---------PARADAS--------"<<endl;
+cout<<"Cuarto Anillo y Grigota "<<endl;
+cout<<"Cuarto Anillo y Av. Pirai  "<<endl;
+cout<<"Av. Gutierrez y Pirai "<<endl;
+cout<<"Av. Cuarto Anillo y Av paragua  "<<endl;
+cout<<"Av. Roca y Coronado Cuarto Anillo "<<endl;
+    		atras();
+    		break;
+    	case 101:
+    		cout<<"LINEA 101"<<endl;
+cout<<"Opera desde las 5:00 hasta las 23:00"<<endl;
+cout<<"----------PARADAS-------------  "<<endl;
+cout<<"Av. Grigota del 5to anillo al 1ero.  "<<endl;
+cout<<"Av irala y Vallegrande "<<endl;
+cout<<"Av Viedma y Av Brasil  "<<endl;
+cout<<"Av Prolongacion Juan Pablo 2145"<<endl;
+cout<<"Av Brasil 313 "<<endl;
+			atras();
+    		break;
+    	    case 0:
+escribirFrases();
+
+    		atras();
+    		break;
+    		case 1:
+    system("cls");
+    cout<<"   GRACIAS POR USAR EASY MICRO";
+	return 0;
+    		break;
+    		default:
+    system("cls");
+    cout<<"   ERROR";
+    system("cls");
+	return main();
+	}
+	return 0;
+}
+int cargar(int a[],int n){
+    for(int i=0;i<n;i++){
+        cout<<"| "<<a[i]<<") linea  --> "<<"       |"<<endl;
+        
+    }}
+    int atras(){
+    int a;
+    	cout<<"1) SALIR"<<endl;
+    	cout<<"2) ATRAS"<<endl;
+   
+    	cin>>a;
+    	if(a==1){
+    		system("cls");
+    		cout<<"   GRACIAS POR USAR EASY MICRO";
+    		return 0;
+		}
+	
+		if(a==2){
+			system("cls");
+			return main();
+		}
+	}
+
+
+
+void escribirFrases(){
+	ofstream archivo;
+	string nombreArchivo,frase;
+	char rpt;
+	
+	
+	archivo.open("QUEJAS.txt ",ios::out); 
+	
+	if(archivo.fail()){
+		cout<<"Error ";
+		exit(1);
+	}
+	else{
+	
+	do{
+		fflush(stdin);
+		cout<<"Ingrese su queja: ";
+		getline(cin,frase);
+		archivo<<frase<<endl;
+		
+		cout<<"Desea agregar otra queja(S/N): ";
+		cin>>rpt;
+	}while((rpt == 'S') || (rpt == 's'));
+
+	archivo.close(); //Cerramos el archivo
+	}
+}
